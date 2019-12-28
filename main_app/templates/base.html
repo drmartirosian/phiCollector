@@ -17,8 +17,9 @@
           <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Collector</a></li>
         </ul>
         <ul class="right">
-          <li><a href="/about">About</a></li>
-          <li><a href="/phis">View All My Phis</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'phis_create' %}">Philo+</a></li>
+          <li><a href="{% url 'index' %}">View Philosophies</a></li>
         </ul>
       </div>
     </nav>
