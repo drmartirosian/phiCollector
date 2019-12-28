@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Philosophies List</h1>
+
+{% for phi in phis %}
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">{{ phi.name }}</span>
+      <p>Breed: {{ phi.breed }}</p>
+      <p>Description: {{ phi.description }}</p>
+      {% if phi.age > 0 %}
+        <p>Age: {{ phi.age }}</p>
+      {% else %}
+        <p>Age: Kitten</p>
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}
