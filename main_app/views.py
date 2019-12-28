@@ -1,23 +1,7 @@
 from django.shortcuts import render
+from .models import Phi
 
-# Add the following import
-from django.http import HttpResponse
-
-class Phi:
-  def __init__(self, name, breed, description, age):
-    self.name = name
-    self.breed = breed
-    self.description = description
-    self.age = age
-
-phis = [
-  Phi('Lolo', 'tabby', 'foul little demon', 3),
-  Phi('Sachi', 'tortoise shell', 'diluted tortoise shell', 0),
-  Phi('Raven', 'black tripod', '3 legged phi', 4)
-]
-
-# Define the home view
-
+# DEFINE BELLOW
 def home(request):
   return render(request, 'home.html')
 
@@ -25,4 +9,9 @@ def about(request):
   return render(request, 'about.html')
 
 def phis_index(request):
+  phis = Phi.objects.all()
+  return render(request, 'phis/index.html', { 'phis': phis })
+
+def phis_details(request):
+  phis = Phi.objects.get(id=cat_id)
   return render(request, 'phis/index.html', { 'phis': phis })
