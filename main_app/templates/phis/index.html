@@ -4,6 +4,7 @@
 <h1>Philosophies List</h1>
 
 {% for phi in phis %}
+<a href="{% url 'detail' phi.id %}">
   <div class="card">
     <div class="card-content">
       <span class="card-title">{{ phi.name }}</span>
