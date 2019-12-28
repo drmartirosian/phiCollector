@@ -6,6 +6,8 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
     path('phis/', views.phis_index, name='index'),
-    path('phis/<int:phi_id>/', views.phis_details, name='detail'),
+    path('phis/<int:phi_id>/', views.phis_detail, name='detail'),
     path('phis/create/', views.PhiCreate.as_view(), name='phis_create'),
+    path('phis/<int:pk>/update/', views.PhiUpdate.as_view(), name='phis_update'),
+    path('phis/<int:pk>/delete/', views.PhiDelete.as_view(), name='phis_delete'),
 ]
