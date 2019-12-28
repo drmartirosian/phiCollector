@@ -10,5 +10,7 @@ class Phi:  # Note that parens are optional if not inheriting from another class
     self.age = age
 
 phis = [
-  Phi('Democracy', 'tabby', 'foul little demon', 3),
+  Phi('Lolo', 'tabby', 'foul little demon', 3),
+  Phi('Sachi', 'tortoise shell', 'diluted tortoise shell', 0),
+  Phi('Raven', 'black tripod', '3 legged cat', 4)
 ]
