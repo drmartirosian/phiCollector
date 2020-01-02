@@ -1,22 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Philosophies List</h1>
+<h1>Phi List</h1>
 
 {% for phi in phis %}
-<a href="{% url 'detail' phi.id %}">
-  <div class="card">
-    <div class="card-content">
-      <span class="card-title">{{ phi.name }}</span>
-      <p>Breed: {{ phi.breed }}</p>
-      <p>Description: {{ phi.description }}</p>
-      {% if phi.age > 0 %}
-        <p>Age: {{ phi.age }}</p>
-      {% else %}
-        <p>Age: Kitten</p>
-      {% endif %}
+  <a href="{% url 'detail' phi.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ phi.name }}</span>
+            <p>Breed: {{ phi.breed }}</p>
+            <p>Description: {{ phi.description }}</p>
+            {% if phi.age > 0 %}
+                <p>Age: {{ phi.age }}</p>
+            {% else %}
+                <p>Age: Kitten</p>
+            {% endif %}
+        </div>
     </div>
-  </div>
+  </a>
 {% endfor %}
 
 {% endblock %}
