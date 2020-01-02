@@ -58,7 +58,7 @@ def about(request):
 
 @login_required
 def phis_index(request):
-  phis = Phi.objects.filter(user = request.user)
+  phis = Phi.objects.all()
   # phis = request.user.phi_set.all()
   return render(request, 'phis/index.html', { 'phis': phis })
 
